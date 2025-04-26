@@ -1,0 +1,26 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: matriculas-servicio
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_matriculas
+    username: root
+    password: 123456789
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+usuarios-servicio:
+  url: http://localhost:8081
+asignaturas-servicio:
+  url: http://localhost:8082

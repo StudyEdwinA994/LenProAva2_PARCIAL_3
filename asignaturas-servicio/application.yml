@@ -1,0 +1,14 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: asignaturas-servicio
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_asignaturas
+    username: root
+    password: 123456789
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

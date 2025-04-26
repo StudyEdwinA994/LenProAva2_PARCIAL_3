@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/StudyEdwinA994/LenProAva2_PARCIAL_2.git
+          default-label: main
+          search-paths:
+            - usuarios-servicio
+            - asignaturas-servicio
+            - matriculas-servicio
+  application:
+    name: config-server
